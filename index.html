@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="ChatGPT Image Oct 17, 2025, 12_23_33 PM.png">
+  <title>VIDEOPRODUKCIA | skal8x.motion</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+ <script>
+(function() {
+  const ease = 0.08; // 0.08 = pomalý, 0.15 = rýchlejší
+  let currentScroll = window.scrollY;
+  let targetScroll = window.scrollY;
+
+  // Wheel listener
+  window.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    targetScroll += e.deltaY; // cieľová pozícia scrollu
+    targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight));
+  }, { passive: false });
+
+  function smoothScroll() {
+    currentScroll += (targetScroll - currentScroll) * ease;
+    window.scrollTo(0, currentScroll);
+    requestAnimationFrame(smoothScroll);
+  }
+
+  requestAnimationFrame(smoothScroll);
+})();
+</script>
+
+</head>
+<body>
+  <!-- Ambientný glow -->
+  <div class="ambient-glow"></div>
+
+  <div class="content">
+    <div class="main-title">
+      <a href="index.html">skal8x.motion</a>
+    </div>
+
+    <header>
+      <a href="cennik.html" data-text="[Cenník]"><span>[Cenník]</span></a>
+      <a href="kontakt.html" data-text="[Kontakt]"><span>[Kontakt]</span></a>
+      <a href="profil.html" data-text="[Profil]"><span>[Profil]</span></a>
+    </header>
+  </div>
+
+  <script>
+    const glow = document.querySelector('.ambient-glow');
+    document.addEventListener('mousemove', (e) => {
+      // Glow sa bude pohybovať s miernym oneskorením a jemným offsetom
+      const x = e.clientX - 200;
+      const y = e.clientY - 200;
+      glow.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+  <div class="center-content">
+  <div class="small-text">🎥 AUTÁ / EVENTY / PROMÁ</div>
+  <h1 class="big-text">VIDEOGRAPHER / VIDEOEDITOR</h1>
+</div>
+<div class="video-section">
+  <h2 class="video-section-title">AUTÁ</h2>
+  <div class="video-grid">
+    <video controls>
+      <source src="audi.mp4" type="video/mp4">
+      Tvoj prehliadač nepodporuje prehrávanie videa.
+    </video>
+
+    <video controls>
+      <source src="bmw.mp4" type="video/mp4">
+      Tvoj prehliadač nepodporuje prehrávanie videa.
+    </video>
+
+    <video controls>
+      <source src="leon.mp4" type="video/mp4">
+      Tvoj prehliadač nepodporuje prehrávanie videa.
+    </video>
+  </div>
+</div>
+<div class="video-section">
+  <h2 class="video-section-title">PROMÁ / EVENTY</h2>
+
+  <div class="video-grid">
+    <video controls>
+      <source src="stance.mp4" type="video/mp4">
+      Tvoj prehliadač nepodporuje prehrávanie videa.
+    </video>
+
+    <video controls>
+      <source src="golden.mp4" type="video/mp4">
+      Tvoj prehliadač nepodporuje prehrávanie videa.
+    </video>
+
+    <video controls>
+      <source src="BAILARR.mp4" type="video/mp4">
+      Tvoj prehliadač nepodporuje prehrávanie videa.
+    </video>
+  </div>
+</div>
+<div class="name-section">
+  <h1 class="velky-text">MAREK "SKAL8X" URMINSKÝ</h1>
+  <div class="maly-text">Martin, Slovensko</div>
+
+  <div class="quote-container">
+    <img src="image00001.jpeg" alt="Marek Skal8x" class="profile-pic">
+    <div class="quote">
+      Venujem sa tvoreniu videí od detstva a v skal8x.motion spájam svoje záľuby – autá, edit a stretávanie ľudí. Tvorím automotive videá ako aj akcie z rôznych tuningových a automotive zrazov / akcií.
+
+<br>
+<br>
+Tvorím videá inak – s efektmi, dynamikou a kreatívnym strihom. V Adobe After Effects experimentujem s vizuálnymi efektmi a pohybovou grafikou, aby tvoje video bolo práve iba to jedno na SVETE.
+    </div>
+  </div>
+</div>
+<div class="why-choose-section">
+  <h2 class="section-title">What I offer</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <h3>Kreatívny prístup</h3>
+      <p>Každé video je jedinečné a prispôsobené štýlu klienta, s dôrazom na detail a emócie.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Profesionálna kvalita</h3>
+      <p>Pracujem s modernou technikou a softvérom, aby výsledné videá pôsobili vysokokvalitne a dynamicky.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Flexibilita & spolupráca</h3>
+      <p>Rýchlo sa prispôsobím potrebám projektu a komunikujem otvorene, aby sme dosiahli ideálny výsledok.</p>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="ChatGPT Image Oct 17, 2025, 12_23_33 PM.png">
+  <title>CENNÍK | skal8x.motion</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <script>
+(function() {
+  const ease = 0.08; 
+  let currentScroll = window.scrollY;
+  let targetScroll = window.scrollY;
+
+  window.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    targetScroll += e.deltaY; 
+    targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight));
+  }, { passive: false });
+
+  function smoothScroll() {
+    currentScroll += (targetScroll - currentScroll) * ease;
+    window.scrollTo(0, currentScroll);
+    requestAnimationFrame(smoothScroll);
+  }
+
+  requestAnimationFrame(smoothScroll);
+})();
+</script>
+</head>
+<body>
+  <!-- Ambientný glow -->
+  <div class="ambient-glow"></div>
+
+  <!-- Horná hlavička -->
+  <div class="content">
+    <div class="main-title">
+      <a href="index.html">skal8x.motion</a>
+    </div>
+
+    <header>
+      <a href="cennik.html" data-text="[Cenník]"><span>[Cenník]</span></a>
+      <a href="kontakt.html" data-text="[Kontakt]"><span>[Kontakt]</span></a>
+      <a href="profil.html" data-text="[Profil]"><span>[Profil]</span></a>
+    </header>
+  </div>
+
+  <script>
+    const glow = document.querySelector('.ambient-glow');
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX - 200;
+      const y = e.clientY - 200;
+      glow.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+
+  <!-- Hlavný nadpis -->
+  <div class="center-content">
+    <div class="small-text">CENNÍK / SLUŽBY / VIDEÁ</div>
+    <h1 class="big-text">CENY A BALÍKY</h1>
+  </div>
+
+  <!-- Sekcia Cenníka -->
+  <div class="why-choose-section">
+    <h2 class="section-title">Cenník</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Autá & Eventy</h3>
+        <p>Krátke videá na výšku: <br>25€ – 50€<br>
+        Full event coverage (na výšku, krátke 15s): <br>100€ – 300€</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Promo videá</h3>
+        <p>30–60 sekundové promo: 
+            <br>80€ – 200€<br>
+        1–3 minútové promo: <br>250€ – 400€</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Strih a postprodukcia</h3>
+        <p>Editing existujúceho materiálu: 25€ – 150€
+      </div>
+    </div>
+  </div>
+
+  <!-- Prípadne ďalšie doplnkové info -->
+  <div class="center-content">
+    <div class="quote">
+      *Ceny sú orientačné a môžu sa líšiť podľa projektu. Pre konkrétnu ponuku ma kontaktujte.*
+    </div>
+  </div>
+<div class="reservation-section">
+  <h2>Rezervuj si natáčanie</h2>
+  <form action="https://formspree.io/f/myznojqv" method="POST">
+    <input type="text" name="name" placeholder="Tvoje meno" required>
+    <input type="email" name="email" placeholder="Tvoj e-mail" required>
+    <textarea name="message" placeholder="Detaily projektu" required></textarea>
+    <button type="submit">Odoslať objednávku</button>
+  </form>
+</div>
+<br>
+<br>
+</body>
+</html>

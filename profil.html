@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>PROFIL | skal8x.motion</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Smooth scroll -->
+  <script>
+    (function() {
+      const ease = 0.08;
+      let currentScroll = window.scrollY;
+      let targetScroll = window.scrollY;
+
+      window.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        targetScroll += e.deltaY;
+        targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight));
+      }, { passive: false });
+
+      function smoothScroll() {
+        currentScroll += (targetScroll - currentScroll) * ease;
+        window.scrollTo(0, currentScroll);
+        requestAnimationFrame(smoothScroll);
+      }
+
+      requestAnimationFrame(smoothScroll);
+    })();
+  </script>
+</head>
+<body>
+  <!-- Ambientný glow -->
+  <div class="ambient-glow"></div>
+
+  <!-- Horný obsah: logo + navigácia -->
+  <div class="content">
+    <div class="main-title">
+      <a href="index.html">skal8x.motion</a>
+    </div>
+
+    <header>
+      <a href="cennik.html" data-text="[Cenník]"><span>[Cenník]</span></a>
+      <a href="kontakt.html" data-text="[Kontakt]"><span>[Kontakt]</span></a>
+      <a href="profil.html" data-text="[Profil]"><span>[Profil]</span></a>
+    </header>
+  </div>
+
+  <script>
+    const glow = document.querySelector('.ambient-glow');
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX - 200;
+      const y = e.clientY - 200;
+      glow.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+
+  <!-- Stredový obsah profilu -->
+  <div class="center-content">
+    <h1 class="big-text">Marek "SKAL8X" Urminský</h1>
+    <div class="small-text">Videographer | Videoeditor | Slovensko</div>
+  </div>
+
+  <!-- Sekcia o mne -->
+  <div class="name-section">
+    <div class="quote-container">
+      <img src="image00001.jpeg" alt="Marek Skal8x" class="profile-pic">
+      <div class="quote">
+        Venujem sa tvoreniu videí od detstva a v skal8x.motion spájam svoje záľuby – autá, edit a stretávanie ľudí. Tvorím automotive videá ako aj akcie z rôznych tuningových a automotive zrazov / akcií.<br><br>
+        Tvorím videá inak – s efektmi, dynamikou a kreatívnym strihom. V Adobe After Effects experimentujem s vizuálnymi efektmi a pohybovou grafikou, aby tvoje video bolo práve iba to jedno na SVETE.
+      </div>
+    </div>
+  </div>
+
+  <!-- Sekcia "Rezervuj si natáčanie" -->
+  <div class="reservation-section">
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+      <input type="text" name="name" placeholder="Tvoje meno" required>
+      <input type="email" name="email" placeholder="Tvoj e-mail" required>
+      <textarea name="message" placeholder="Detaily projektu" required></textarea>
+      <button type="submit">Odoslať objednávku</button>
+    </form>
+  </div>
+
+</body>
+</html>
